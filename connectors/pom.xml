@@ -114,5 +114,7 @@
     <module>mongodb-api</module>
     <module>connector-mongodb</module>
     <module>translator-mongodb</module>
+    <module>connector-simpledb</module>
+	<module>simpledb-api</module>
   </modules>
 </project>
