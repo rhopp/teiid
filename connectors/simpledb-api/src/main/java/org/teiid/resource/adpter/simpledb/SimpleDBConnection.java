@@ -4,6 +4,6 @@ import javax.resource.cci.Connection;
 
 public interface SimpleDBConnection extends Connection{
 	
-	public TestAPIClass getAPIClass();
+	public SimpleDbAPICLass getAPIClass();
 
 }

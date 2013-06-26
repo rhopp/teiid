@@ -55,5 +55,34 @@
 				</excludes>
 			</resource>
 		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+			            <id>copy-resources</id>
+			            <phase>install</phase>
+			            <goals>
+			              <goal>copy-resources</goal>
+			            </goals>
+			            <configuration>
+			            <filters>
+			            	
+			            </filters>
+			            	<outputDirectory>/home/rax/Runtimes/teiid/jboss-as-7.1.1.Final1/modules/org/jboss/teiid/translator/simpledb/main</outputDirectory>
+				         	<resources>
+								<resource>
+								<directory>target/</directory>
+								<includes>
+									<include>*.jar</include>
+								</includes>
+								</resource>
+				         	</resources>
+			            </configuration>
+			        </execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>

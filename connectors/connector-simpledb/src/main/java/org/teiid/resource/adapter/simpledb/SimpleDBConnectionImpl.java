@@ -3,23 +3,23 @@ package org.teiid.resource.adapter.simpledb;
 import javax.resource.ResourceException;
 
 import org.teiid.resource.adpter.simpledb.SimpleDBConnection;
-import org.teiid.resource.adpter.simpledb.TestAPIClass;
+import org.teiid.resource.adpter.simpledb.SimpleDbAPICLass;
 import org.teiid.resource.spi.BasicConnection;
 
 public class SimpleDBConnectionImpl extends BasicConnection implements
 		SimpleDBConnection {
 
-	private TestAPIClass apiClass;
+	private SimpleDbAPICLass apiClass;
 
 	public SimpleDBConnectionImpl(String accessKey, String secretAccessKey) {
-		apiClass = new TestAPIClass(accessKey, secretAccessKey);
+		apiClass = new SimpleDbAPICLass(accessKey, secretAccessKey);
 	}
 
 	public void close() throws ResourceException {
 
 	}
 
-	public TestAPIClass getAPIClass() {
+	public SimpleDbAPICLass getAPIClass() {
 		return apiClass;
 	}
 }
