@@ -70,7 +70,7 @@
 			            <filters>
 			            	
 			            </filters>
-			            	<outputDirectory>/home/rax/Runtimes/teiid/jboss-as-7.1.1.Final1/modules/org/jboss/teiid/translator/simpledb/main</outputDirectory>
+			            	<outputDirectory>/home/rax/Runtimes/teiid/jboss-eap-6.1/modules/system/layers/base/org/jboss/teiid/translator/simpledb/main</outputDirectory>
 				         	<resources>
 								<resource>
 								<directory>target/</directory>

@@ -132,6 +132,7 @@ public class SimpleDBExecutionFactory extends ExecutionFactory<ConnectionFactory
 				for (DerivedColumn column : ((Select)command).getDerivedColumns()){
 					columns.add(SimpleDBSQLVisitor.getSQLString(column));
 				}
+				System.out.println(SimpleDBSQLVisitor.getSQLString((Select)command));
 				list = connection.getAPIClass().performSelect(SimpleDBSQLVisitor.getSQLString((Select)command), columns);
 				listIterator = list.iterator();
 				

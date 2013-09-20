@@ -8,6 +8,9 @@ import static org.teiid.language.SQLConstants.Reserved.LIKE;
 import static org.teiid.language.SQLConstants.Reserved.ORDER;
 import static org.teiid.language.SQLConstants.Reserved.BY;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.teiid.language.ColumnReference;
 import org.teiid.language.Comparison;
 import org.teiid.language.Comparison.Operator;
@@ -30,12 +33,16 @@ public class SimpleDBSQLVisitor extends SQLStringVisitor {
 		buffer.append(SELECT).append(Tokens.SPACE);
 //		append(obj.getDerivedColumns());
 		if (obj.getDerivedColumns().size()>1){
+			List<DerivedColumn> columnsList = new ArrayList<DerivedColumn>();
 			for (DerivedColumn column : obj.getDerivedColumns()) {
 				ColumnReference ref = (ColumnReference) column.getExpression();
 				if (!ref.getName().equals("itemName()")){
-					append(column);
+					columnsList.add(column);
 				}
 			}
+			append(columnsList);
+		}else{
+			append(obj.getDerivedColumns());
 		}
 		buffer.append(Tokens.SPACE);
 		if (obj.getFrom() != null && !obj.getFrom().isEmpty()){
