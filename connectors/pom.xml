@@ -116,5 +116,6 @@
     <module>translator-mongodb</module>
     <module>connector-simpledb</module>
 	<module>simpledb-api</module>
+	<module>translator-simpledb</module>
   </modules>
 </project>
