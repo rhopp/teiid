@@ -10,7 +10,7 @@ import org.teiid.language.Delete;
 import org.teiid.language.Literal;
 import org.teiid.language.NamedTable;
 import org.teiid.language.visitor.HierarchyVisitor;
-import org.teiid.resource.adpter.simpledb.SimpleDbAPICLass;
+import org.teiid.resource.adpter.simpledb.SimpleDbAPIClass;
 
 public class SimpleDBDeleteVisitor extends HierarchyVisitor {
 
@@ -18,10 +18,10 @@ public class SimpleDBDeleteVisitor extends HierarchyVisitor {
 	private String tableName;
 	private boolean isSimpleDelete = false;
 	private String itemName = "";
-	private SimpleDbAPICLass apiClass;
+	private SimpleDbAPIClass apiClass;
 	private List<String> itemNames;
 	
-	public SimpleDBDeleteVisitor(Delete delete, SimpleDbAPICLass apiClass) {
+	public SimpleDBDeleteVisitor(Delete delete, SimpleDbAPIClass apiClass) {
 		this.apiClass = apiClass;
 		visit(delete);
 	}

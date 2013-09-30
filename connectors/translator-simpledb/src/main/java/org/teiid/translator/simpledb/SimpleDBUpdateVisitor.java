@@ -10,16 +10,16 @@ import org.teiid.language.Literal;
 import org.teiid.language.SetClause;
 import org.teiid.language.Update;
 import org.teiid.language.visitor.HierarchyVisitor;
-import org.teiid.resource.adpter.simpledb.SimpleDbAPICLass;
+import org.teiid.resource.adpter.simpledb.SimpleDbAPIClass;
 
 public class SimpleDBUpdateVisitor extends HierarchyVisitor{
 
-	private SimpleDbAPICLass apiClass;
+	private SimpleDbAPIClass apiClass;
 	private String tableName;
 	private Map<String, String> attributes;
 	private List<String> itemNames;
 	
-	public SimpleDBUpdateVisitor(Update update, SimpleDbAPICLass apiClass) {
+	public SimpleDBUpdateVisitor(Update update, SimpleDbAPIClass apiClass) {
 		attributes = new HashMap<String, String>();
 		itemNames = new ArrayList<String>();
 		this.apiClass = apiClass;
