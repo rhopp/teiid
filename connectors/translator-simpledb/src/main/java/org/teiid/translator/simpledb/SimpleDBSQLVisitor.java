@@ -1,12 +1,10 @@
 package org.teiid.translator.simpledb;
 
 import static org.teiid.language.SQLConstants.Reserved.FROM;
+import static org.teiid.language.SQLConstants.Reserved.LIKE;
 import static org.teiid.language.SQLConstants.Reserved.LIMIT;
 import static org.teiid.language.SQLConstants.Reserved.SELECT;
 import static org.teiid.language.SQLConstants.Reserved.WHERE;
-import static org.teiid.language.SQLConstants.Reserved.LIKE;
-import static org.teiid.language.SQLConstants.Reserved.ORDER;
-import static org.teiid.language.SQLConstants.Reserved.BY;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +13,10 @@ import org.teiid.language.ColumnReference;
 import org.teiid.language.Comparison;
 import org.teiid.language.Comparison.Operator;
 import org.teiid.language.DerivedColumn;
-import org.teiid.language.Insert;
 import org.teiid.language.LanguageObject;
 import org.teiid.language.Like;
 import org.teiid.language.Limit;
 import org.teiid.language.Not;
-import org.teiid.language.OrderBy;
 import org.teiid.language.SQLConstants.Tokens;
 import org.teiid.language.Select;
 import org.teiid.language.visitor.SQLStringVisitor;
