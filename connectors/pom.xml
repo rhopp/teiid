@@ -118,5 +118,6 @@
     <module>translator-cassandra</module>
     <module>connector-simpledb</module>
     <module>simpledb-api</module>
+    <module>translator-simpledb</module>
   </modules>
 </project>
