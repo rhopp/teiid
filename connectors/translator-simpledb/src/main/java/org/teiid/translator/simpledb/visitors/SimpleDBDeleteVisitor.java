@@ -1,4 +1,4 @@
-package org.teiid.translator.simpledb;
+package org.teiid.translator.simpledb.visitors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +74,7 @@ public class SimpleDBDeleteVisitor extends HierarchyVisitor {
 				if (obj.getRightExpression() instanceof Literal){
 					itemName = (String) ((Literal)obj.getRightExpression()).getValue();
 				}else{
-					//neco jineho nez Literal?
+					//Could here be something else than literal?
 //					throw new TranslatorException("Wrong DELETE Format");
 				}
 				super.visit(obj);
@@ -86,7 +86,7 @@ public class SimpleDBDeleteVisitor extends HierarchyVisitor {
 				if (obj.getLeftExpression() instanceof Literal){
 					itemName = (String) ((Literal)obj.getRightExpression()).getValue();
 				}else{
-					//Neco jineho nez Literal?
+					//Could here be something else than literal?
 //					throw new TranslatorException("Wrong DELETE Format");
 				}
 				super.visit(obj);

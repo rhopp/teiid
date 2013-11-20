@@ -9,7 +9,7 @@ import org.teiid.resource.adpter.simpledb.SimpleDBConnection;
 import org.teiid.translator.DataNotAvailableException;
 import org.teiid.translator.TranslatorException;
 import org.teiid.translator.UpdateExecution;
-import org.teiid.translator.simpledb.SimpleDBUpdateVisitor;
+import org.teiid.translator.simpledb.visitors.SimpleDBUpdateVisitor;
 
 public class SimpleDBUpdateExecute implements UpdateExecution {
 	

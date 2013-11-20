@@ -75,7 +75,7 @@ public class SimpleDbAPIClass {
 	}
 
 	/**
-	 * 
+	 * Performs select expression. This expression must be in format which is understandable to SimpleDB database
 	 * @param selectExpression
 	 * @param columns
 	 * @return two dimensional array of results as List<List<String>>
@@ -88,7 +88,7 @@ public class SimpleDbAPIClass {
 	}
 
 	/**
-	 * 
+	 *  Performs update on given domain and items
 	 * @param domainName
 	 * @param items
 	 */
@@ -109,7 +109,7 @@ public class SimpleDbAPIClass {
 	}
 
 	/**
-	 * 
+	 *  Inserts item into given domain.
 	 * @param domainName
 	 * @param itemName
 	 * @param columnsMap

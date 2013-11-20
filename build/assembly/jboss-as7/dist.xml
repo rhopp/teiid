@@ -382,7 +382,7 @@
         <useAllReactorProjects>true</useAllReactorProjects>
 
         <includes>
-            <include>org.jboss.teiid.connectors:connector-simpledb:rar</include>
+            <include>org.jboss.teiid.connectors:connector-simpledb</include>
         </includes>
 
         <binaries>   

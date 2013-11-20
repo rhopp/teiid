@@ -1,4 +1,4 @@
-package org.teiid.translator.simpledb;
+package org.teiid.translator.simpledb.visitors;
 
 import static org.teiid.language.SQLConstants.Reserved.FROM;
 import static org.teiid.language.SQLConstants.Reserved.LIKE;
@@ -27,7 +27,6 @@ public class SimpleDBSQLVisitor extends SQLStringVisitor {
 	@Override
 	public void visit(Select obj) {
 		buffer.append(SELECT).append(Tokens.SPACE);
-//		append(obj.getDerivedColumns());
 		if (obj.getDerivedColumns().size()>1){
 			List<DerivedColumn> columnsList = new ArrayList<DerivedColumn>();
 			for (DerivedColumn column : obj.getDerivedColumns()) {
@@ -53,10 +52,6 @@ public class SimpleDBSQLVisitor extends SQLStringVisitor {
 		if (obj.getLimit() != null){
 			append(obj.getLimit());
 		}
-		/*if (obj.getOrderBy() != null){
-			buffer.append(ORDER).append(Tokens.SPACE).append(BY).append(Tokens.SPACE);
-			append(obj.getOrderBy());
-		}*/
 	}
 	
 	
@@ -111,10 +106,4 @@ public class SimpleDBSQLVisitor extends SQLStringVisitor {
 			buffer.append(Tokens.SPACE);
 		}
 	}
-	
-/*	@Override
-	public void visit(Insert obj) {
-		// TODO Auto-generated method stub
-		super.visit(obj);
-	}*/
 }

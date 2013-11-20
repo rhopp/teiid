@@ -9,7 +9,7 @@ import org.teiid.resource.adpter.simpledb.SimpleDBConnection;
 import org.teiid.translator.DataNotAvailableException;
 import org.teiid.translator.TranslatorException;
 import org.teiid.translator.UpdateExecution;
-import org.teiid.translator.simpledb.SimpleDBDeleteVisitor;
+import org.teiid.translator.simpledb.visitors.SimpleDBDeleteVisitor;
 
 public class SimpleDBDeleteExecute implements UpdateExecution {
 	
@@ -24,16 +24,15 @@ public class SimpleDBDeleteExecute implements UpdateExecution {
 
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void cancel() throws TranslatorException {
-		// TODO Auto-generated method stub
 
 	}
 
+	
 	@Override
 	public void execute() throws TranslatorException {
 		Delete delete = (Delete) command;

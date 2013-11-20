@@ -163,7 +163,7 @@
             <include>org.jboss.teiid.connectors:connector-google</include>
             <include>org.jboss.teiid.connectors:connector-mongodb</include>
             <include>org.jboss.teiid.connectors:connector-cassandra</include>
-	    <include>org.jboss.teiid.connectors:connector-simpledb</include>
+    		<include>org.jboss.teiid.connectors:connector-simpledb</include>
         </includes>
 
         <binaries>        

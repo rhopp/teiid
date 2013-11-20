@@ -1,4 +1,4 @@
-package org.teiid.translator.simpledb;
+package org.teiid.translator.simpledb.visitors;
 
 import java.util.ArrayList;
 import java.util.HashMap;
